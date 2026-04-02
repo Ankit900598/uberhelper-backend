@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UberHelper Admin (MVP)</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 16px; }
+      input, button { margin: 6px 0; padding: 8px; width: 100%; max-width: 520px; }
+      .row { max-width: 520px; }
+      .small { font-size: 12px; color: #555; }
+      pre { background: #f4f4f4; padding: 12px; overflow: auto; }
+    </style>
+  </head>
+  <body>
+    <h2>UberHelper Admin (MVP)</h2>
+    <div class="small">
+      This is a lightweight UI scaffold. Backend endpoints are not fully implemented yet in this repo.
+      Update BASE_URL in <code>script.js</code>.
+    </div>
+
+    <h3>Approve worker</h3>
+    <div class="row">
+      <input id="workerId" placeholder="worker userId (uuid)" />
+      <button onclick="approveWorker()">Approve</button>
+      <pre id="approveOut"></pre>
+    </div>
+
+    <h3>View job timeline</h3>
+    <div class="row">
+      <input id="jobId" placeholder="jobId (uuid)" />
+      <button onclick="loadJobEvents()">Load events</button>
+      <pre id="eventsOut"></pre>
+    </div>
+
+    <h3>Admin cancel</h3>
+    <div class="row">
+      <input id="cancelJobId" placeholder="jobId (uuid)" />
+      <input id="cancelReason" placeholder="reason (e.g., no_show, fraud)" />
+      <button onclick="cancelJob()">Cancel job</button>
+      <pre id="cancelOut"></pre>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+

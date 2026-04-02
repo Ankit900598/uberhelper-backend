@@ -1,0 +1,24 @@
+{
+  "city": "Delhi",
+  "category": "QuickHelper",
+  "grid": {
+    "cellSizeMeters": 500,
+    "maxRingForInitialDispatch": 2,
+    "maxRingForFallback": 6
+  },
+  "dispatch": {
+    "offerToClosestN": 5,
+    "offerTimeoutMs": 25000,
+    "maxDispatchAttempts": 3
+  },
+  "workerSelection": {
+    "minWorkersNeeded": 1,
+    "maxWorkersConsidered": 60
+  },
+  "pilotKpis": {
+    "targetAvgTimeToFirstAcceptanceMs": 120000,
+    "targetOfferSuccessRate": 0.25,
+    "targetNoShowRate": 0.05
+  }
+}
+
