@@ -30,7 +30,10 @@ import { generateOtpCode, otpHash, verifyOtp } from "./safety/otp.js";
 
 const cfg = loadConfig(process.env);
 const db = createPool(cfg.databaseUrl);
-const redis = new Redis(cfg.redisUrl);
+const redis = new Redis(cfg.redisUrl, {
+  tls: {},
+  maxRetriesPerRequest: null
+});
 
 const app = express();
 app.use(cors());
